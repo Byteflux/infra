@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/blah/blah
+    repoURL: https://github.com/Byteflux/infra
     targetRevision: HEAD
-    path: apps
+    path: manifests
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:

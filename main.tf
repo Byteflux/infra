@@ -43,5 +43,5 @@ resource "helm_release" "argo" {
 
 resource "kubectl_manifest" "argo_root_app" {
   depends_on = [helm_release.argo]
-  yaml_body  = file("${path.root}/argo-root-app.yaml")
+  yaml_body  = file("${path.root}/manifests/argo-root-app.yaml")
 }
