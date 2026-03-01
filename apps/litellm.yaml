@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: oci://docker.litellm.ai/berriai/litellm-helm
-    targetRevision: 1.81.13
+    targetRevision: 1.81.12-stable.2
     chart: litellm-helm
   destination:
     server: https://kubernetes.default.svc
