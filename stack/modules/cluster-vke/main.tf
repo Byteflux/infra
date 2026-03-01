@@ -23,5 +23,12 @@ resource "vultr_kubernetes" "vke" {
 }
 
 locals {
-  kube_config = yamldecode(base64decode(vultr_kubernetes.vke.kube_config))
+  kube_config_raw = base64decode(vultr_kubernetes.vke.kube_config)
+  kube_config     = yamldecode(local.kube_config_raw)
+}
+
+resource "local_file" "kube_config" {
+  filename        = pathexpand("~/.kube/config-vke")
+  content         = local.kube_config_raw
+  file_permission = "0600"
 }
