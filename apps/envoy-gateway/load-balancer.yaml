@@ -5,8 +5,7 @@ metadata:
   namespace: envoy-gateway-system
 spec:
   selector:
-    matchLabels:
-      app: envoy-gateway
+    app: envoy-gateway
   type: LoadBalancer
   ports:
     - protocol: TCP
