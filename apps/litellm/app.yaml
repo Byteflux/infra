@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: litellm
-  namespace: argocd
+  namespace: litellm
 spec:
   project: default
   source:
-    repoURL: https://github.com/Byteflux/infra
-    targetRevision: HEAD
-    path: apps/litellm
+    repoURL: oci://docker.litellm.ai/berriai/litellm-helm
+    targetRevision: 1.81.12-stable.2
+    chart: litellm-helm
   destination:
     server: https://kubernetes.default.svc
     namespace: litellm
