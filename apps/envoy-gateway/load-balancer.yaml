@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: envoy-gateway-lb
+  namespace: envoy-gateway-system
+spec:
+  selector:
+    app: envoy-gateway
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
