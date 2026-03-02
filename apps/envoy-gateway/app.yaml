@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: envoy-gateway
-  namespace: argocd
+  namespace: envoy-gateway-system
 spec:
   project: default
   source:
