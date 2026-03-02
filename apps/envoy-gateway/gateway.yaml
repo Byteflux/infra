@@ -3,8 +3,6 @@ kind: Gateway
 metadata:
   name: envoy-gateway
   namespace: envoy-gateway-system
-  labels:
-    app: envoy-gateway
 spec:
   gatewayClassName: eg
   listeners:
