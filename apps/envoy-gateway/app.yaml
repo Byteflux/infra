@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Byteflux/infra
-    targetRevision: HEAD
-    path: apps/envoy-gateway
+    repoURL: docker.io/envoyproxy
+    targetRevision: 1.7.0
+    chart: gateway-helm
   destination:
     server: https://kubernetes.default.svc
     namespace: envoy-gateway-system
