@@ -19,7 +19,7 @@ variable "np_plan" {
 }
 
 variable "np_node_quantity" {
-  default = 1
+  default = 3
 }
 
 variable "np_min_nodes" {
@@ -27,7 +27,7 @@ variable "np_min_nodes" {
 }
 
 variable "np_max_nodes" {
-  default = 3
+  default = 5
 }
 
 variable "np_auto_scale" {
