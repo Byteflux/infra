@@ -13,5 +13,5 @@ spec:
             type: PathPrefix
             value: /ai
       backendRefs:
-        - name: litellm
+        - name: litellm-app
           port: 4000
